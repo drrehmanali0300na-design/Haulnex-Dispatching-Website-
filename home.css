@@ -1,0 +1,1457 @@
+
+/* =========================================================
+   HAULNEX DISPATCH SERVICES
+   HOME PAGE STYLESHEET
+   Theme: Premium Blue + Black
+========================================================= */
+
+
+/* =========================================================
+   01. HERO SECTION
+========================================================= */
+
+.hero-section {
+    position: relative;
+    min-height: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #080D18;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.hero-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            #080D18 0%,
+            rgba(8,13,24,0.98) 32%,
+            rgba(8,13,24,0.75) 60%,
+            rgba(8,13,24,0.45) 100%
+        );
+    z-index: 1;
+}
+
+.hero-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        #080D18 0%,
+        transparent 28%,
+        transparent 85%,
+        rgba(8,13,24,0.5) 100%
+    );
+    z-index: 2;
+}
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(rgba(50,149,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(50,149,255,0.08) 1px, transparent 1px);
+    background-size: 70px 70px;
+    mask-image: linear-gradient(to right, black, transparent 85%);
+}
+
+.hero-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+}
+
+.hero-glow-one {
+    top: 5%;
+    right: 8%;
+    background: rgba(22,119,255,0.18);
+}
+
+.hero-glow-two {
+    bottom: 0;
+    left: 15%;
+    width: 300px;
+    height: 300px;
+    background: rgba(22,119,255,0.09);
+}
+
+
+/* =========================================================
+   02. HERO CONTENT
+========================================================= */
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 20px;
+    padding-top: 75px;
+    padding-bottom: 105px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 610px;
+    animation: heroContentIn 0.8s ease both;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 27px;
+    padding: 9px 14px;
+    color: #9BC8FF;
+    background: rgba(22,119,255,0.09);
+    border: 1px solid rgba(50,149,255,0.25);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #3295FF;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #3295FF;
+}
+
+.hero-title {
+    color: #FFFFFF;
+    font-size: clamp(48px, 5.5vw, 76px);
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -3.5px;
+}
+
+.hero-title span {
+    color: #3295FF;
+    text-shadow: 0 0 35px rgba(50,149,255,0.15);
+}
+
+.hero-description {
+    max-width: 490px;
+    margin-top: 25px;
+    color: #A8B4C7;
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.hero-primary-btn {
+    min-width: 180px;
+    min-height: 56px;
+}
+
+.hero-secondary-btn {
+    min-width: 190px;
+    min-height: 56px;
+}
+
+.hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 40px;
+}
+
+.trust-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #3295FF;
+    background: rgba(22,119,255,0.12);
+    border: 1px solid rgba(50,149,255,0.25);
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.hero-trust p {
+    color: #A8B4C7;
+    font-size: 12px;
+}
+
+.hero-trust strong {
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   03. HERO TRUCK VISUAL
+========================================================= */
+
+.hero-visual {
+    position: relative;
+    min-width: 0;
+    min-height: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: heroVisualIn 1s ease both;
+}
+
+.hero-image-glow {
+    position: absolute;
+    width: 85%;
+    height: 65%;
+    background: rgba(22,119,255,0.20);
+    filter: blur(90px);
+    border-radius: 50%;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 120%;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #101C30;
+    transform: translateX(5%);
+}
+
+.hero-truck-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.85) contrast(1.08) saturate(0.85);
+    animation: truckDriving 16s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            #080D18 0%,
+            rgba(8,13,24,0.65) 5%,
+            transparent 42%,
+            rgba(8,13,24,0.12) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(8,13,24,0.8) 0%,
+            transparent 45%
+        );
+    pointer-events: none;
+}
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 8%;
+    right: 2%;
+    width: 65px;
+    height: 65px;
+    border-top: 2px solid #3295FF;
+    border-right: 2px solid #3295FF;
+    opacity: 0.7;
+}
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 8%;
+    left: 4%;
+    width: 65px;
+    height: 65px;
+    border-bottom: 2px solid #3295FF;
+    border-left: 2px solid #3295FF;
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   04. FLOATING HERO CARDS
+========================================================= */
+
+.hero-floating-card {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 16px 19px;
+    background: rgba(11,21,38,0.92);
+    border: 1px solid rgba(50,149,255,0.24);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+}
+
+.hero-card-top {
+    top: 12%;
+    left: -1%;
+}
+
+.hero-card-bottom {
+    bottom: 12%;
+    right: -2%;
+}
+
+.floating-card-icon {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: #1677FF;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.hero-floating-card strong {
+    display: block;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.hero-floating-card small {
+    display: block;
+    margin-top: 3px;
+    color: #9BAAC0;
+    font-size: 10px;
+}
+
+.floating-card-line {
+    width: 3px;
+    height: 34px;
+    background: #3295FF;
+}
+
+.hero-visual-label {
+    position: absolute;
+    z-index: 3;
+    bottom: 3%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #FFFFFF;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.label-line {
+    width: 25px;
+    height: 2px;
+    background: #3295FF;
+}
+
+
+/* =========================================================
+   05. HERO ANIMATIONS
+========================================================= */
+
+@keyframes heroContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroVisualIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes truckDriving {
+    0% {
+        transform: scale(1.02) translateX(-1%);
+    }
+    50% {
+        transform: scale(1.08) translateX(1%);
+    }
+    100% {
+        transform: scale(1.04) translateX(-0.5%);
+    }
+}
+
+
+/* =========================================================
+   06. HERO BOTTOM BAR
+========================================================= */
+
+.hero-bottom {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transform: translateX(-50%);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-bottom-item {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 10px 18px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    color: #D0D9E8;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.hero-bottom-item:last-child {
+    border-right: none;
+}
+
+.bottom-number {
+    color: #3295FF;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   07. INTRO SECTION
+========================================================= */
+
+.intro-section {
+    background: #080D18;
+}
+
+.intro-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 27px;
+    color: #3295FF;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.intro-label span {
+    width: 25px;
+    height: 2px;
+    background: #1677FF;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.intro-content .section-heading {
+    max-width: 650px;
+    font-size: clamp(36px, 4vw, 51px);
+}
+
+.intro-description {
+    padding-top: 6px;
+}
+
+.intro-description p {
+    margin-bottom: 17px;
+    color: #A8B4C7;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.intro-description .text-link {
+    margin-top: 13px;
+}
+
+
+/* =========================================================
+   08. SERVICES SECTION
+========================================================= */
+
+.services-section {
+    position: relative;
+    background: #0A1120;
+    overflow: hidden;
+}
+
+.services-section::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -180px;
+    width: 450px;
+    height: 450px;
+    background: rgba(22,119,255,0.08);
+    filter: blur(100px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.section-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.section-top .section-heading {
+    max-width: 620px;
+}
+
+.section-top-btn {
+    flex-shrink: 0;
+    min-height: 48px;
+}
+
+.services-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    position: relative;
+    min-height: 310px;
+    padding: 30px 24px;
+    overflow: hidden;
+    background: #101B2E;
+    border: 1px solid rgba(255,255,255,0.07);
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    right: -35px;
+    bottom: -45px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(50,149,255,0.1);
+    border-radius: 50%;
+}
+
+.service-card:hover {
+    background: #13243D;
+    border-color: rgba(50,149,255,0.45);
+    transform: translateY(-5px);
+}
+
+.service-number {
+    position: absolute;
+    top: 25px;
+    right: 24px;
+    color: rgba(255,255,255,0.2);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 26px;
+    color: #3295FF;
+    background: rgba(22,119,255,0.12);
+    border: 1px solid rgba(50,149,255,0.2);
+    border-radius: 7px;
+    font-size: 25px;
+}
+
+.service-card h3 {
+    margin-bottom: 13px;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.service-card p {
+    min-height: 76px;
+    color: #9EADC2;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 18px;
+    color: #3295FF;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.service-link span {
+    font-size: 15px;
+}
+
+.service-link:hover {
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   09. TRUCK TYPES SECTION
+========================================================= */
+
+.truck-types-section {
+    background: #080D18;
+}
+
+.truck-section-header {
+    max-width: 700px;
+    margin-bottom: 48px;
+}
+
+.truck-section-header .section-description {
+    max-width: 560px;
+}
+
+.truck-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.truck-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #101B2E;
+    border: 1px solid rgba(255,255,255,0.07);
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.truck-card:hover {
+    border-color: rgba(50,149,255,0.45);
+    transform: translateY(-5px);
+}
+
+.truck-image {
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    background: #15233A;
+}
+
+.truck-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(8,13,24,0.4),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+.truck-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.83) saturate(0.85);
+    transition: transform 0.5s ease;
+}
+
+.truck-card:hover .truck-image img {
+    transform: scale(1.05);
+}
+
+.truck-index {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: #1677FF;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.truck-card-content {
+    padding: 23px 21px 25px;
+}
+
+.truck-card-content h3 {
+    margin-bottom: 9px;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.truck-card-content p {
+    min-height: 65px;
+    color: #9EADC2;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.truck-card-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: #3295FF;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.truck-card-content a:hover {
+    color: #FFFFFF;
+}
+
+.truck-bottom-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   10. WHY HAULNEX SECTION
+========================================================= */
+
+.why-section {
+    position: relative;
+    background: #0A1120;
+    overflow: hidden;
+}
+
+.why-section::before {
+    content: "";
+    position: absolute;
+    left: -180px;
+    bottom: -180px;
+    width: 420px;
+    height: 420px;
+    background: rgba(22,119,255,0.08);
+    filter: blur(110px);
+    border-radius: 50%;
+}
+
+.why-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 85px;
+}
+
+.why-content .section-heading {
+    font-size: clamp(34px, 3.8vw, 48px);
+}
+
+.why-content > .section-description {
+    margin-top: 22px;
+}
+
+.why-features {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.why-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.why-feature-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #3295FF;
+    background: rgba(22,119,255,0.13);
+    border: 1px solid rgba(50,149,255,0.25);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.why-feature h3 {
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.why-feature p {
+    color: #9EADC2;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.why-visual {
+    position: relative;
+    min-height: 480px;
+}
+
+.why-image-main {
+    position: absolute;
+    inset: 0 0 40px 30px;
+    overflow: hidden;
+    border: 1px solid rgba(50,149,255,0.3);
+    background: #14233A;
+}
+
+.why-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.82) saturate(0.85);
+}
+
+.why-image-decoration {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    width: 120px;
+    height: 120px;
+    border-top: 2px solid #1677FF;
+    border-right: 2px solid #1677FF;
+}
+
+.why-caption {
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px 22px;
+    background: #101E34;
+    border: 1px solid rgba(50,149,255,0.2);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+.caption-line {
+    width: 3px;
+    height: 35px;
+    background: #3295FF;
+}
+
+.why-caption strong,
+.why-caption small {
+    display: block;
+}
+
+.why-caption strong {
+    color: #FFFFFF;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.why-caption small {
+    margin-top: 4px;
+    color: #9EADC2;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   11. PROCESS SECTION
+========================================================= */
+
+.process-section {
+    background: #080D18;
+}
+
+.process-header {
+    max-width: 680px;
+    margin-bottom: 55px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.process-card {
+    position: relative;
+    min-height: 260px;
+    padding: 30px 24px;
+    background: #101B2E;
+    border: 1px solid rgba(255,255,255,0.07);
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.process-card:hover {
+    background: #13243D;
+    border-color: rgba(50,149,255,0.4);
+}
+
+.process-step {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: rgba(50,149,255,0.5);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.process-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 27px;
+    color: #3295FF;
+    background: rgba(22,119,255,0.13);
+    border: 1px solid rgba(50,149,255,0.22);
+    border-radius: 7px;
+    font-size: 23px;
+}
+
+.process-card h3 {
+    margin-bottom: 12px;
+    color: #FFFFFF;
+    font-size: 17px;
+}
+
+.process-card p {
+    color: #9EADC2;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.process-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   12. CARRIER CTA SECTION
+========================================================= */
+
+.carrier-cta-section {
+    position: relative;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0B1629;
+}
+
+.cta-background {
+    position: absolute;
+    inset: 0;
+}
+
+.cta-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.5) saturate(0.7);
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,12,24,0.98) 0%,
+            rgba(5,12,24,0.88) 45%,
+            rgba(5,12,24,0.45) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(5,12,24,0.6),
+            transparent
+        );
+}
+
+.cta-container {
+    position: relative;
+    z-index: 2;
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.cta-content {
+    max-width: 650px;
+}
+
+.cta-content h2 {
+    color: #FFFFFF;
+    font-size: clamp(40px, 5vw, 61px);
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+.cta-content h2 span {
+    color: #3295FF;
+}
+
+.cta-content > p {
+    max-width: 520px;
+    margin-top: 20px;
+    color: #B4C0D2;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+
+/* =========================================================
+   13. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-section {
+        min-height: 720px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .hero-title {
+        font-size: clamp(45px, 5vw, 62px);
+        letter-spacing: -2.5px;
+    }
+
+    .hero-visual {
+        min-height: 410px;
+    }
+
+    .hero-image-wrapper {
+        height: 390px;
+        width: 115%;
+    }
+
+    .hero-floating-card {
+        padding: 12px 14px;
+    }
+
+    .hero-bottom-item {
+        padding-inline: 10px;
+        font-size: 10px;
+    }
+
+    .intro-content {
+        gap: 45px;
+    }
+
+    .services-grid,
+    .truck-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        min-height: 280px;
+    }
+
+    .why-container {
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 75px;
+        padding-bottom: 115px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+        margin-bottom: 22px;
+    }
+
+    .hero-title {
+        font-size: clamp(43px, 9vw, 65px);
+        letter-spacing: -2px;
+        line-height: 1.08;
+    }
+
+    .hero-description {
+        max-width: 540px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        margin-top: 27px;
+    }
+
+    .hero-trust {
+        margin-top: 27px;
+    }
+
+    .hero-visual {
+        min-height: 340px;
+        margin-top: 5px;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        height: 340px;
+        transform: none;
+    }
+
+    .hero-card-top {
+        top: 7%;
+        left: -5px;
+    }
+
+    .hero-card-bottom {
+        right: -5px;
+        bottom: 8%;
+    }
+
+    .hero-visual-label {
+        bottom: 2%;
+        left: 6%;
+    }
+
+    .hero-bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-bottom-item {
+        min-height: 48px;
+        font-size: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .hero-bottom-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .hero-bottom-item:nth-child(3),
+    .hero-bottom-item:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .intro-content .section-heading {
+        font-size: 38px;
+    }
+
+    .section-top {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
+
+    .section-top-btn {
+        min-height: 44px;
+    }
+
+    .truck-section-header,
+    .process-header {
+        margin-bottom: 35px;
+    }
+
+    .why-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .why-visual {
+        min-height: 380px;
+    }
+
+    .why-image-main {
+        inset: 0 0 35px 15px;
+    }
+
+    .cta-content h2 {
+        font-size: 44px;
+    }
+
+}
+
+
+/* =========================================================
+   15. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-container {
+        padding-top: 55px;
+    }
+
+    .hero-title {
+        font-size: 43px;
+        letter-spacing: -1.8px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-visual {
+        min-height: 275px;
+    }
+
+    .hero-image-wrapper {
+        height: 275px;
+    }
+
+    .hero-floating-card {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .hero-floating-card strong {
+        font-size: 10px;
+    }
+
+    .hero-floating-card small {
+        font-size: 8px;
+    }
+
+    .floating-card-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .hero-bottom-item {
+        padding-inline: 5px;
+        gap: 7px;
+        font-size: 9px;
+    }
+
+    .bottom-number {
+        font-size: 10px;
+    }
+
+    .services-grid,
+    .truck-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 25px 22px;
+    }
+
+    .service-card p {
+        min-height: auto;
+    }
+
+    .truck-image {
+        height: 220px;
+    }
+
+    .truck-card-content p {
+        min-height: auto;
+    }
+
+    .process-card {
+        min-height: auto;
+        padding: 25px 22px;
+    }
+
+    .why-visual {
+        min-height: 300px;
+    }
+
+    .why-caption {
+        right: 10px;
+        padding: 13px 15px;
+    }
+
+    .cta-container {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .cta-content h2 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   16. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-content,
+    .hero-visual,
+    .hero-truck-image {
+        animation: none !important;
+        transform: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   END OF HOME CSS
+========================================================= */
+
+/* HOME PAGE SCROLL REVEAL */
+
+.intro-section,
+.services-section,
+.truck-types-section,
+.why-section,
+.process-section,
+.carrier-cta-section,
+.service-card,
+.truck-card,
+.process-step {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.intro-section.is-visible,
+.services-section.is-visible,
+.truck-types-section.is-visible,
+.why-section.is-visible,
+.process-section.is-visible,
+.carrier-cta-section.is-visible,
+.service-card.is-visible,
+.truck-card.is-visible,
+.process-step.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro-section,
+    .services-section,
+    .truck-types-section,
+    .why-section,
+    .process-section,
+    .carrier-cta-section,
+    .service-card,
+    .truck-card,
+    .process-step {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

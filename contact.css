@@ -1,0 +1,663 @@
+
+/* =========================================================
+   HAULNEX DISPATCH SERVICES
+   CONTACT PAGE STYLESHEET
+   Theme: Premium Blue + Black
+========================================================= */
+
+
+/* =========================================================
+   01. CONTACT HERO
+========================================================= */
+
+.contact-hero {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(8, 13, 24, 0.98), rgba(8, 13, 24, 0.80)),
+        radial-gradient(circle at 78% 45%, rgba(22, 119, 255, 0.20), transparent 42%),
+        #080D18;
+}
+
+.contact-hero::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    right: -100px;
+    top: -90px;
+    border: 1px solid rgba(50, 149, 255, 0.12);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 60px rgba(50, 149, 255, 0.035),
+        0 0 0 120px rgba(50, 149, 255, 0.025);
+    pointer-events: none;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(8, 13, 24, 0.4),
+        transparent 55%
+    );
+    pointer-events: none;
+}
+
+.contact-hero-container {
+    position: relative;
+    z-index: 2;
+    padding-top: 95px;
+    padding-bottom: 85px;
+}
+
+.contact-hero-content {
+    max-width: 750px;
+}
+
+.contact-hero .section-label,
+.contact-intro .section-label,
+.contact-information .section-label,
+.contact-form-heading .section-label,
+.contact-carrier-content .section-label {
+    display: inline-block;
+    color: #3295FF;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.contact-hero h1 {
+    color: #FFFFFF;
+    font-size: clamp(42px, 5.5vw, 65px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -2px;
+    margin: 0 0 22px;
+}
+
+.contact-hero h1 span {
+    display: block;
+    color: #3295FF;
+}
+
+.contact-hero-content > p {
+    max-width: 620px;
+    color: #A8B4C7;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.contact-hero-content .btn {
+    min-height: 52px;
+    padding: 0 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   02. CONTACT INTRO
+========================================================= */
+
+.section-padding {
+    padding: 95px 0;
+}
+
+.contact-intro {
+    background: #0A1020;
+    border-bottom: 1px solid #1A2940;
+}
+
+.contact-intro-content {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro-content h2 {
+    color: #FFFFFF;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+}
+
+.contact-intro-content h2 span {
+    color: #3295FF;
+}
+
+.contact-intro-content p {
+    max-width: 680px;
+    color: #A8B4C7;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   03. CONTACT MAIN LAYOUT
+========================================================= */
+
+.contact-main-section {
+    background: #080D18;
+}
+
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 65px;
+}
+
+
+/* =========================================================
+   04. CONTACT INFORMATION
+========================================================= */
+
+.contact-information {
+    padding-top: 12px;
+}
+
+.contact-information h2 {
+    color: #FFFFFF;
+    font-size: clamp(32px, 3.5vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+}
+
+.contact-information h2 span {
+    color: #3295FF;
+}
+
+.contact-information-description {
+    color: #A8B4C7;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.contact-detail-list {
+    display: grid;
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #24344D;
+}
+
+.contact-detail-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3295FF;
+    background: rgba(22, 119, 255, 0.12);
+    border: 1px solid rgba(50, 149, 255, 0.20);
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.contact-detail-item h3 {
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 0 0 6px;
+}
+
+.contact-detail-item p {
+    color: #A8B4C7;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================================
+   05. BUSINESS HOURS
+========================================================= */
+
+.contact-hours-card {
+    padding: 25px;
+    background: #0D1628;
+    border: 1px solid #24344D;
+    border-radius: 11px;
+}
+
+.contact-hours-card h3 {
+    color: #FFFFFF;
+    font-size: 17px;
+    margin: 0 0 20px;
+}
+
+.contact-hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #24344D;
+    color: #A8B4C7;
+    font-size: 12px;
+}
+
+.contact-hours-row span:last-child {
+    color: #3295FF;
+    font-weight: 600;
+    text-align: right;
+}
+
+.contact-hours-card > p {
+    color: #718198;
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 18px 0 0;
+}
+
+
+/* =========================================================
+   06. CONTACT FORM WRAPPER
+========================================================= */
+
+.contact-form-wrapper {
+    padding: 38px;
+    background: #0D1628;
+    border: 1px solid #24344D;
+    border-radius: 13px;
+}
+
+.contact-form-heading {
+    margin-bottom: 30px;
+}
+
+.contact-form-heading h2 {
+    color: #FFFFFF;
+    font-size: 27px;
+    line-height: 1.3;
+    margin: 0 0 12px;
+}
+
+.contact-form-heading > p {
+    color: #A8B4C7;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* =========================================================
+   07. FORM FIELDS
+========================================================= */
+
+.contact-form {
+    display: grid;
+    gap: 22px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.form-group label {
+    color: #DCE5F1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #3295FF;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 15px;
+    color: #FFFFFF;
+    background: #080D18;
+    border: 1px solid #24344D;
+    border-radius: 7px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 49px;
+}
+
+.form-group textarea {
+    min-height: 145px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #65748B;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3295FF;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    color: #FFFFFF;
+    background: #0D1628;
+}
+
+
+/* =========================================================
+   08. FORM CONSENT
+========================================================= */
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.form-consent input {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: #1677FF;
+    cursor: pointer;
+}
+
+.form-consent label {
+    color: #A8B4C7;
+    font-size: 11px;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   09. SUBMIT BUTTON
+========================================================= */
+
+.contact-submit-btn {
+    width: 100%;
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 20px;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.contact-form-message {
+    display: none;
+    padding: 13px 15px;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.contact-form-message.success {
+    display: block;
+    color: #8FE0B3;
+    background: rgba(34, 197, 94, 0.10);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.contact-form-message.error {
+    display: block;
+    color: #FFAAAA;
+    background: rgba(239, 68, 68, 0.10);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.contact-form-note {
+    color: #718198;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+    margin: -7px 0 0;
+}
+
+
+/* =========================================================
+   10. CARRIER CTA
+========================================================= */
+
+.contact-carrier-cta {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(22, 119, 255, 0.17),
+            transparent 55%
+        ),
+        #0D1628;
+    border-top: 1px solid #24344D;
+}
+
+.contact-carrier-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-carrier-content h2 {
+    color: #FFFFFF;
+    font-size: clamp(36px, 4.5vw, 52px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+}
+
+.contact-carrier-content h2 span {
+    color: #3295FF;
+}
+
+.contact-carrier-content > p {
+    max-width: 620px;
+    color: #A8B4C7;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 auto 30px;
+}
+
+.contact-carrier-content > .btn {
+    min-height: 52px;
+    padding: 0 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   11. RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .contact-main-grid {
+        gap: 35px;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .section-padding {
+        padding: 75px 0;
+    }
+
+    .contact-hero {
+        min-height: 410px;
+    }
+
+    .contact-hero-container {
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+
+    .contact-hero h1 {
+        font-size: 45px;
+        letter-spacing: -1px;
+    }
+
+    .contact-main-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contact-information {
+        max-width: 100%;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .contact-hero {
+        min-height: 390px;
+    }
+
+    .contact-hero-container {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+
+    .contact-hero h1 {
+        font-size: 37px;
+        line-height: 1.17;
+    }
+
+    .contact-hero-content > p {
+        font-size: 14px;
+    }
+
+    .contact-intro-content h2 {
+        font-size: 31px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form-wrapper {
+        padding: 23px 17px;
+    }
+
+    .contact-form-heading h2 {
+        font-size: 23px;
+    }
+
+    .contact-hours-card {
+        padding: 20px 16px;
+    }
+
+    .contact-hours-row {
+        font-size: 11px;
+    }
+
+    .contact-carrier-content h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   12. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        transition: none;
+    }
+
+}
+
+/* =========================================
+   CONTACT HERO BACKGROUND IMAGE
+========================================= */
+
+.contact-hero {
+    position: relative;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 13, 24, 0.96) 0%,
+            rgba(8, 13, 24, 0.82) 45%,
+            rgba(8, 13, 24, 0.40) 100%
+        ),
+        url("../assets/images/contact-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

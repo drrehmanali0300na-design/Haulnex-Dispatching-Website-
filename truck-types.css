@@ -1,0 +1,1015 @@
+/* =========================================================
+   HAULNEX DISPATCH SERVICES
+   TRUCK TYPES PAGE
+   Premium Blue + Black Design
+========================================================= */
+
+
+/* =========================================================
+   01. PAGE VARIABLES
+========================================================= */
+
+:root {
+    --truck-black: #080D18;
+    --truck-dark: #0A1020;
+    --truck-card: #101B2E;
+    --truck-blue: #1677FF;
+    --truck-light-blue: #3295FF;
+    --truck-white: #FFFFFF;
+    --truck-text: #A8B4C7;
+    --truck-border: rgba(148, 173, 210, 0.15);
+}
+
+
+/* =========================================================
+   02. COMMON STYLES
+========================================================= */
+
+.truck-types-hero,
+.truck-types-intro,
+.truck-categories,
+.specialized-equipment,
+.truck-types-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.truck-types-page .container,
+.truck-types-hero .container {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.section-padding {
+    padding: 110px 0;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--truck-light-blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.section-eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 2px;
+    background: var(--truck-blue);
+}
+
+.truck-types-intro h2,
+.section-heading h2,
+.specialized-content h2,
+.truck-cta-content h2 {
+    color: var(--truck-white);
+    font-size: clamp(32px, 4vw, 47px);
+    line-height: 1.15;
+    letter-spacing: -1.6px;
+    font-weight: 750;
+}
+
+.truck-types-intro h2 span,
+.section-heading h2 span,
+.specialized-content h2 span,
+.truck-cta-content h2 span {
+    color: var(--truck-light-blue);
+}
+
+
+/* =========================================================
+   03. BUTTONS
+========================================================= */
+
+.btn-primary,
+.btn-secondary {
+    min-height: 52px;
+    padding: 0 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--truck-blue);
+    color: var(--truck-white);
+    border: 1px solid var(--truck-blue);
+}
+
+.btn-primary:hover {
+    background: #075FCF;
+    border-color: #075FCF;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--truck-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(22, 119, 255, 0.12);
+    border-color: var(--truck-blue);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   04. HERO SECTION
+========================================================= */
+
+.truck-types-hero {
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    background-color: var(--truck-black);
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 13, 24, 0.98) 0%,
+            rgba(8, 13, 24, 0.91) 42%,
+            rgba(8, 13, 24, 0.45) 100%
+        ),
+        url("../assets/images/truck-types-hero.jpg");
+    background-size: cover;
+    background-position: center 55%;
+    isolation: isolate;
+}
+
+.truck-types-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            0deg,
+            var(--truck-black) 0%,
+            transparent 22%,
+            transparent 75%,
+            rgba(8, 13, 24, 0.45) 100%
+        );
+}
+
+.truck-types-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(
+            circle at 78% 50%,
+            rgba(22, 119, 255, 0.16),
+            transparent 36%
+        );
+}
+
+.truck-types-hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 65px;
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+.truck-types-hero-content {
+    max-width: 680px;
+}
+
+.truck-types-hero-content h1 {
+    margin: 24px 0 22px;
+    color: var(--truck-white);
+    font-size: clamp(45px, 5.5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    font-weight: 800;
+}
+
+.truck-types-hero-content h1 span {
+    display: block;
+    color: var(--truck-light-blue);
+}
+
+.truck-types-hero-content > p {
+    max-width: 550px;
+    color: #B7C3D6;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.truck-types-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.truck-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    margin-top: 57px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.truck-hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.truck-hero-stat strong {
+    color: var(--truck-light-blue);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.truck-hero-stat span {
+    color: #A8B4C7;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+}
+
+
+/* HERO SIDE CARD */
+
+.truck-hero-side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.truck-hero-side-card {
+    width: 320px;
+    padding: 34px;
+    background: rgba(9, 19, 36, 0.78);
+    border: 1px solid rgba(76, 148, 255, 0.32);
+    border-top: 3px solid var(--truck-blue);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+}
+
+.side-card-label {
+    color: var(--truck-light-blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.truck-hero-side-card h3 {
+    margin: 27px 0 16px;
+    color: var(--truck-white);
+    font-size: 31px;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.truck-hero-side-card p {
+    color: var(--truck-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.side-card-line {
+    width: 55px;
+    height: 3px;
+    margin: 27px 0 18px;
+    background: var(--truck-blue);
+}
+
+.side-card-bottom {
+    color: #8192AA;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    font-weight: 700;
+}
+
+
+/* HERO BOTTOM STRIP */
+
+.truck-hero-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(25px, 7vw, 100px);
+    padding: 10px 20px;
+    background: rgba(8, 13, 24, 0.85);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.truck-hero-bottom span {
+    color: #AAB8CC;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+
+/* =========================================================
+   05. INTRO SECTION
+========================================================= */
+
+.truck-types-intro {
+    background: var(--truck-dark);
+}
+
+.truck-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 90px;
+}
+
+.truck-intro-heading h2 {
+    margin-top: 23px;
+    max-width: 550px;
+}
+
+.truck-intro-description {
+    padding-left: 30px;
+    border-left: 2px solid var(--truck-blue);
+}
+
+.truck-intro-description p {
+    color: var(--truck-text);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.truck-intro-description p + p {
+    margin-top: 16px;
+}
+
+
+/* =========================================================
+   06. TRUCK CATEGORIES
+========================================================= */
+
+.truck-categories {
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(22, 119, 255, 0.09),
+            transparent 45%
+        ),
+        var(--truck-black);
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading .section-eyebrow {
+    justify-content: center;
+}
+
+.section-heading h2 {
+    margin: 19px 0 16px;
+}
+
+.section-heading p {
+    color: var(--truck-text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* CARD GRID */
+
+.truck-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+
+/* INDIVIDUAL CARD */
+
+.truck-type-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--truck-card);
+    border: 1px solid var(--truck-border);
+    transition: border-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.truck-type-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(50, 149, 255, 0.65);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+
+/* CARD IMAGE */
+
+.truck-type-image {
+    position: relative;
+    height: 235px;
+    overflow: hidden;
+    background: #101B2E;
+}
+
+.truck-type-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(8, 13, 24, 0.78),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+.truck-type-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.truck-type-card:hover .truck-type-image img {
+    transform: scale(1.045);
+}
+
+.truck-number {
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    color: var(--truck-white);
+    background: rgba(22, 119, 255, 0.9);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* CARD CONTENT */
+
+.truck-type-content {
+    padding: 27px 25px 24px;
+}
+
+.truck-type-label {
+    color: var(--truck-light-blue);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.truck-type-content h3 {
+    margin: 12px 0;
+    color: var(--truck-white);
+    font-size: 25px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.truck-type-content p {
+    min-height: 78px;
+    color: var(--truck-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.truck-type-divider {
+    width: 100%;
+    height: 1px;
+    margin: 23px 0 17px;
+    background: var(--truck-border);
+}
+
+.truck-type-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.truck-type-footer > span:first-child {
+    color: #8EA0B9;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.truck-arrow {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    color: var(--truck-light-blue);
+    background: rgba(22, 119, 255, 0.12);
+    font-size: 17px;
+    transition: background 0.25s ease,
+                color 0.25s ease;
+}
+
+.truck-type-card:hover .truck-arrow {
+    color: var(--truck-white);
+    background: var(--truck-blue);
+}
+
+
+/* =========================================================
+   07. SPECIALIZED EQUIPMENT
+========================================================= */
+
+.specialized-equipment {
+    background: #0B1425;
+}
+
+.specialized-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 85px;
+}
+
+.specialized-content h2 {
+    margin: 22px 0;
+}
+
+.specialized-content > p {
+    margin-bottom: 30px;
+    color: var(--truck-text);
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 470px;
+}
+
+
+/* SPECIALIZED LIST */
+
+.specialized-list {
+    border-top: 1px solid var(--truck-border);
+}
+
+.specialized-item {
+    display: grid;
+    grid-template-columns: 42px 1fr 30px;
+    align-items: center;
+    gap: 18px;
+    padding: 23px 18px;
+    border-bottom: 1px solid var(--truck-border);
+    transition: background 0.25s ease,
+                padding 0.25s ease;
+}
+
+.specialized-item:hover {
+    padding-left: 24px;
+    background: rgba(22, 119, 255, 0.07);
+}
+
+.specialized-number {
+    color: var(--truck-light-blue);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.specialized-item h3 {
+    margin-bottom: 6px;
+    color: var(--truck-white);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.specialized-item p {
+    color: var(--truck-text);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.specialized-arrow {
+    color: var(--truck-light-blue);
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   08. CTA SECTION
+========================================================= */
+
+.truck-types-cta {
+    background: var(--truck-black);
+}
+
+.truck-cta-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+    padding: 65px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 85% 45%,
+            rgba(22, 119, 255, 0.2),
+            transparent 40%
+        ),
+        linear-gradient(120deg, #101D32, #0C1526);
+    border: 1px solid rgba(50, 149, 255, 0.25);
+}
+
+.truck-cta-content h2 {
+    margin: 20px 0;
+}
+
+.truck-cta-content > p {
+    max-width: 540px;
+    color: var(--truck-text);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.truck-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+
+/* CTA DECORATION */
+
+.truck-cta-decoration {
+    text-align: center;
+}
+
+.truck-cta-decoration > span {
+    display: block;
+    color: rgba(50, 149, 255, 0.12);
+    font-size: clamp(42px, 6vw, 75px);
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.cta-decoration-line {
+    width: 90px;
+    height: 3px;
+    margin: 18px auto;
+    background: var(--truck-blue);
+}
+
+.truck-cta-decoration small {
+    color: #8192AA;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   09. FOOTER SUPPORT
+========================================================= */
+
+.truck-types-cta + .site-footer {
+    position: relative;
+}
+
+
+/* =========================================================
+   10. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .truck-types-hero-container {
+        grid-template-columns: 1fr 0.65fr;
+        gap: 30px;
+    }
+
+    .truck-hero-side-card {
+        width: 280px;
+        padding: 27px;
+    }
+
+    .truck-intro-grid {
+        gap: 45px;
+    }
+
+    .truck-types-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .specialized-grid {
+        gap: 45px;
+    }
+
+    .truck-cta-box {
+        padding: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   11. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .section-padding {
+        padding: 78px 0;
+    }
+
+    .truck-types-hero {
+        min-height: auto;
+        background-position: 62% center;
+    }
+
+    .truck-types-hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 85px;
+        padding-bottom: 105px;
+    }
+
+    .truck-types-hero-content {
+        max-width: 100%;
+    }
+
+    .truck-types-hero-content h1 {
+        font-size: clamp(42px, 9vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .truck-types-hero-content > p {
+        font-size: 14px;
+    }
+
+    .truck-hero-side {
+        justify-content: flex-start;
+    }
+
+    .truck-hero-side-card {
+        width: min(100%, 380px);
+    }
+
+    .truck-hero-stats {
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .truck-hero-bottom {
+        gap: 17px;
+        justify-content: space-around;
+    }
+
+    .truck-hero-bottom span {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    .truck-intro-grid,
+    .specialized-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .truck-intro-description {
+        padding-left: 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .truck-types-grid {
+        gap: 20px;
+    }
+
+    .truck-type-image {
+        height: 205px;
+    }
+
+    .truck-type-content {
+        padding: 22px 20px;
+    }
+
+    .truck-type-content h3 {
+        font-size: 22px;
+    }
+
+    .truck-type-content p {
+        min-height: auto;
+    }
+
+    .truck-cta-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px 28px;
+    }
+
+    .truck-cta-decoration {
+        padding-top: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   12. RESPONSIVE — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .truck-types-hero-container,
+    .truck-types-intro .container,
+    .truck-categories .container,
+    .specialized-equipment .container,
+    .truck-types-cta .container {
+        width: calc(100% - 36px);
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .truck-types-hero-content h1 {
+        font-size: 41px;
+    }
+
+    .truck-types-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .truck-types-hero-actions a {
+        width: 100%;
+    }
+
+    .truck-hero-stats {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .truck-hero-stat strong {
+        font-size: 20px;
+    }
+
+    .truck-hero-stat span {
+        font-size: 9px;
+    }
+
+    .truck-hero-bottom {
+        gap: 9px;
+        padding-inline: 8px;
+    }
+
+    .truck-hero-bottom span {
+        font-size: 7px;
+    }
+
+    .truck-types-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .truck-type-image {
+        height: 230px;
+    }
+
+    .specialized-item {
+        grid-template-columns: 32px 1fr 20px;
+        gap: 12px;
+        padding: 20px 10px;
+    }
+
+    .truck-cta-box {
+        padding: 30px 20px;
+    }
+
+    .truck-cta-actions {
+        flex-direction: column;
+    }
+
+    .truck-cta-actions a {
+        width: 100%;
+    }
+
+    .truck-cta-decoration > span {
+        font-size: 43px;
+    }
+
+}
+
+
+/* =========================================================
+   13. EXTRA SMALL SCREENS
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .truck-types-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .truck-hero-bottom span {
+        font-size: 6px;
+        letter-spacing: 0.4px;
+    }
+
+    .truck-hero-stats {
+        gap: 8px;
+    }
+
+    .truck-type-image {
+        height: 195px;
+    }
+
+}
+
+
+/* =========================================================
+   14. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .truck-type-card,
+    .truck-type-image img,
+    .truck-arrow,
+    .specialized-item,
+    .btn-primary,
+    .btn-secondary {
+        transition: none !important;
+    }
+
+    .truck-type-card:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none;
+    }
+
+}
+/* =========================================================
+   NAVBAR & FOOTER — USE GLOBAL DESIGN
+   Do not override shared components
+========================================================= */
+
+/* Navbar */
+.site-header,
+.site-header *,
+.navbar-container,
+.main-navigation,
+.nav-list,
+.nav-link,
+.navbar-actions,
+.brand-logo,
+.logo-image,
+.logo-text,
+.mobile-menu-toggle {
+    box-sizing: border-box;
+}
+
+/* Footer */
+.site-footer,
+.site-footer *,
+.footer-main,
+.footer-brand,
+.footer-column,
+.footer-bottom {
+    box-sizing: border-box;
+}
+
+/* Remove page-specific navbar/footer effects */
+.site-header,
+.site-footer {
+    transform: none;
+    filter: none;
+}
+
+/* Footer must use global background and colors */
+.site-footer {
+    background: var(--color-black);
+    color: var(--color-white);
+}

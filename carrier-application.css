@@ -1,0 +1,757 @@
+
+/* =========================================================
+   HAULNEX DISPATCH SERVICES
+   CARRIER APPLICATION PAGE
+   Theme: Premium Blue + Black
+========================================================= */
+
+
+/* =========================================================
+   01. APPLICATION HERO
+========================================================= */
+
+.application-hero {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 45%, rgba(22, 119, 255, 0.19), transparent 38%),
+        linear-gradient(110deg, #080D18 25%, #0D1628 100%);
+}
+
+.application-hero::after {
+    content: "";
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    right: -100px;
+    top: -80px;
+    border: 1px solid rgba(50, 149, 255, 0.13);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 60px rgba(50, 149, 255, 0.035),
+        0 0 0 120px rgba(50, 149, 255, 0.025);
+    pointer-events: none;
+}
+
+.application-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 13, 24, 0.25),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.application-hero-container {
+    position: relative;
+    z-index: 2;
+    padding-top: 95px;
+    padding-bottom: 85px;
+}
+
+.application-hero-content {
+    max-width: 760px;
+}
+
+.application-hero-content .section-label,
+.application-intro-content .section-label,
+.application-form-heading .section-label,
+.application-sidebar-card .section-label,
+.application-final-content .section-label {
+    display: inline-block;
+    color: #3295FF;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.application-hero-content h1 {
+    color: #FFFFFF;
+    font-size: clamp(42px, 5.5vw, 65px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 0 0 22px;
+}
+
+.application-hero-content h1 span {
+    display: block;
+    color: #3295FF;
+}
+
+.application-hero-content > p {
+    max-width: 650px;
+    color: #A8B4C7;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 30px;
+}
+
+.application-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.application-hero-points span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    color: #DCE5F1;
+    background: rgba(22, 119, 255, 0.10);
+    border: 1px solid rgba(50, 149, 255, 0.22);
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.application-hero-points span::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #3295FF;
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   02. APPLICATION INTRO
+========================================================= */
+
+.application-intro {
+    background: #0A1020;
+    border-bottom: 1px solid #24344D;
+}
+
+.application-intro-content {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.application-intro-content h2 {
+    color: #FFFFFF;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+}
+
+.application-intro-content h2 span {
+    color: #3295FF;
+}
+
+.application-intro-content p {
+    max-width: 700px;
+    color: #A8B4C7;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   03. APPLICATION MAIN LAYOUT
+========================================================= */
+
+.application-main-section {
+    background: #080D18;
+}
+
+.application-layout {
+    display: grid;
+    grid-template-columns: 310px minmax(0, 1fr);
+    align-items: start;
+    gap: 35px;
+}
+
+
+/* =========================================================
+   04. APPLICATION SIDEBAR
+========================================================= */
+
+.application-sidebar {
+    position: sticky;
+    top: 110px;
+    display: grid;
+    gap: 20px;
+}
+
+.application-sidebar-card {
+    padding: 27px 23px;
+    background: #0D1628;
+    border: 1px solid #24344D;
+    border-radius: 11px;
+}
+
+.application-sidebar-card h2 {
+    color: #FFFFFF;
+    font-size: 23px;
+    line-height: 1.3;
+    margin: 0 0 12px;
+}
+
+.application-sidebar-card > p {
+    color: #A8B4C7;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 27px;
+}
+
+.application-checklist {
+    display: grid;
+    gap: 23px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.application-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.check-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3295FF;
+    background: rgba(22, 119, 255, 0.13);
+    border: 1px solid rgba(50, 149, 255, 0.22);
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.application-checklist li strong {
+    display: block;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 2px 0 6px;
+}
+
+.application-checklist li small {
+    display: block;
+    color: #8291A8;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   05. SIDEBAR NOTE
+========================================================= */
+
+.application-sidebar-note {
+    padding: 25px 23px;
+    background: rgba(22, 119, 255, 0.08);
+    border: 1px solid rgba(50, 149, 255, 0.20);
+    border-radius: 10px;
+}
+
+.sidebar-note-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3295FF;
+    background: rgba(22, 119, 255, 0.14);
+    border-radius: 50%;
+    font-weight: 800;
+    margin-bottom: 17px;
+}
+
+.application-sidebar-note h3 {
+    color: #FFFFFF;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.application-sidebar-note p {
+    color: #A8B4C7;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 17px;
+}
+
+.application-sidebar-note a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #3295FF;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.application-sidebar-note a span {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   06. APPLICATION FORM WRAPPER
+========================================================= */
+
+.application-form-wrapper {
+    min-width: 0;
+    padding: 35px;
+    background: #0D1628;
+    border: 1px solid #24344D;
+    border-radius: 12px;
+}
+
+.application-form-heading {
+    padding-bottom: 26px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #24344D;
+}
+
+.application-form-heading h2 {
+    color: #FFFFFF;
+    font-size: 27px;
+    line-height: 1.3;
+    margin: 0 0 10px;
+}
+
+.application-form-heading > p {
+    color: #A8B4C7;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* =========================================================
+   07. FORM SECTIONS
+========================================================= */
+
+.carrier-application-form {
+    display: grid;
+    gap: 32px;
+}
+
+.application-form-section {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #24344D;
+}
+
+.form-section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.form-section-number {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3295FF;
+    background: rgba(22, 119, 255, 0.13);
+    border: 1px solid rgba(50, 149, 255, 0.22);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.form-section-heading h3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 1px 0 7px;
+}
+
+.form-section-heading p {
+    color: #8291A8;
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================================================
+   08. FORM GRID
+========================================================= */
+
+.application-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 18px;
+}
+
+.application-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.application-form-group label {
+    color: #DCE5F1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.application-form-group label span {
+    color: #3295FF;
+}
+
+.application-form-group input,
+.application-form-group select,
+.application-form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    color: #FFFFFF;
+    background: #080D18;
+    border: 1px solid #24344D;
+    border-radius: 7px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    transition: border-color 0.2s ease;
+}
+
+.application-form-group input,
+.application-form-group select {
+    min-height: 48px;
+}
+
+.application-form-group textarea {
+    min-height: 125px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.application-form-group input::placeholder,
+.application-form-group textarea::placeholder {
+    color: #65748B;
+}
+
+.application-form-group input:focus,
+.application-form-group select:focus,
+.application-form-group textarea:focus {
+    border-color: #3295FF;
+}
+
+.application-form-group select {
+    cursor: pointer;
+}
+
+.application-form-group select option {
+    color: #FFFFFF;
+    background: #0D1628;
+}
+
+.application-form-group input[type="date"] {
+    color-scheme: dark;
+}
+
+
+/* =========================================================
+   09. CONSENT CHECKBOX
+========================================================= */
+
+.application-form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.application-form-consent input {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    accent-color: #1677FF;
+    cursor: pointer;
+}
+
+.application-form-consent label {
+    color: #A8B4C7;
+    font-size: 11px;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.application-form-consent label a {
+    color: #3295FF;
+    text-decoration: none;
+}
+
+.application-form-consent label a:hover {
+    text-decoration: underline;
+}
+
+.application-form-consent label span {
+    color: #3295FF;
+}
+
+
+/* =========================================================
+   10. FORM MESSAGE
+========================================================= */
+
+.application-form-message {
+    display: none;
+    padding: 14px 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.application-form-message.success {
+    display: block;
+    color: #8FE0B3;
+    background: rgba(34, 197, 94, 0.10);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.application-form-message.error {
+    display: block;
+    color: #FFAAAA;
+    background: rgba(239, 68, 68, 0.10);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+
+/* =========================================================
+   11. SUBMIT BUTTON
+========================================================= */
+
+.application-submit-btn {
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 0 20px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.application-submit-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.application-form-disclaimer {
+    color: #718198;
+    font-size: 10px;
+    line-height: 1.8;
+    text-align: center;
+    margin: -15px 0 0;
+}
+
+
+/* =========================================================
+   12. FINAL CTA
+========================================================= */
+
+.application-final-cta {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(22, 119, 255, 0.18),
+            transparent 55%
+        ),
+        #0D1628;
+    border-top: 1px solid #24344D;
+}
+
+.application-final-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.application-final-content h2 {
+    color: #FFFFFF;
+    font-size: clamp(36px, 4.5vw, 52px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+}
+
+.application-final-content h2 span {
+    color: #3295FF;
+}
+
+.application-final-content > p {
+    max-width: 620px;
+    color: #A8B4C7;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0 auto 28px;
+}
+
+.application-final-content > .btn {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 25px;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   13. RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .application-layout {
+        grid-template-columns: 270px minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .application-form-wrapper {
+        padding: 27px;
+    }
+
+    .application-sidebar-card,
+    .application-sidebar-note {
+        padding: 22px 18px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .section-padding {
+        padding: 75px 0;
+    }
+
+    .application-hero {
+        min-height: 410px;
+    }
+
+    .application-hero-container {
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+
+    .application-hero-content h1 {
+        font-size: 45px;
+        letter-spacing: -1px;
+    }
+
+    .application-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .application-sidebar {
+        position: static;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .application-form-wrapper {
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .application-hero {
+        min-height: 390px;
+    }
+
+    .application-hero-container {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+
+    .application-hero-content h1 {
+        font-size: 37px;
+        line-height: 1.17;
+    }
+
+    .application-hero-content > p {
+        font-size: 13px;
+    }
+
+    .application-hero-points {
+        gap: 8px;
+    }
+
+    .application-hero-points span {
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+
+    .application-intro-content h2 {
+        font-size: 31px;
+    }
+
+    .application-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .application-form-wrapper {
+        padding: 23px 16px;
+    }
+
+    .application-form-heading h2 {
+        font-size: 23px;
+    }
+
+    .application-form-grid {
+        grid-template-columns: 1fr;
+        gap: 19px;
+    }
+
+    .form-section-heading h3 {
+        font-size: 16px;
+    }
+
+    .application-final-content h2 {
+        font-size: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   14. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .application-form-group input,
+    .application-form-group select,
+    .application-form-group textarea {
+        transition: none;
+    }
+
+}

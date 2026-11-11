@@ -1,0 +1,943 @@
+
+/* =========================================================
+   HAULNEX DISPATCH SERVICES
+   TERMS OF SERVICE PAGE
+   Theme: Premium Blue + Black
+========================================================= */
+
+
+/* =========================================================
+   01. PAGE VARIABLES
+========================================================= */
+
+:root {
+    --terms-blue: #1677FF;
+    --terms-blue-light: #3295FF;
+    --terms-blue-dark: #0756C9;
+
+    --terms-black: #080D18;
+    --terms-dark: #0A1020;
+    --terms-secondary: #0D1628;
+    --terms-card: #111D32;
+
+    --terms-white: #FFFFFF;
+    --terms-text: #A8B4C7;
+    --terms-muted: #77869D;
+
+    --terms-border: #24344D;
+}
+
+
+/* =========================================================
+   02. GENERAL PAGE SETTINGS
+========================================================= */
+
+.terms-hero,
+.terms-intro,
+.terms-content-section,
+.terms-cta {
+    position: relative;
+}
+
+.terms-hero .container,
+.terms-intro .container,
+.terms-content-section .container,
+.terms-cta .container {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.terms-policy-section {
+    scroll-margin-top: 110px;
+}
+
+.terms-document a {
+    color: var(--terms-blue-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.terms-document a:hover {
+    color: var(--terms-white);
+}
+
+
+/* =========================================================
+   03. TERMS HERO
+========================================================= */
+
+.terms-hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(22, 119, 255, 0.19),
+            transparent 35%
+        ),
+        linear-gradient(
+            110deg,
+            #080D18 0%,
+            #0A1427 55%,
+            #0D1D36 100%
+        );
+
+    border-bottom: 1px solid var(--terms-border);
+}
+
+.terms-hero::before {
+    content: "";
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    right: -120px;
+    top: -160px;
+
+    border: 1px solid rgba(50, 149, 255, 0.12);
+    border-radius: 50%;
+}
+
+.terms-hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -55px;
+    top: -95px;
+
+    border: 1px solid rgba(50, 149, 255, 0.09);
+    border-radius: 50%;
+}
+
+.terms-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(8, 13, 24, 0.2),
+        transparent 75%
+    );
+
+    pointer-events: none;
+}
+
+.terms-hero-container {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.terms-hero-content {
+    max-width: 800px;
+}
+
+.terms-hero .section-label,
+.terms-intro .section-label,
+.terms-cta .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: var(--terms-blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.terms-hero .section-label::before,
+.terms-intro .section-label::before,
+.terms-cta .section-label::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: var(--terms-blue);
+}
+
+.terms-hero h1 {
+    max-width: 760px;
+    margin: 0 0 22px;
+
+    color: var(--terms-white);
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+}
+
+.terms-hero h1 span {
+    display: block;
+    color: var(--terms-blue-light);
+}
+
+.terms-hero-content > p {
+    max-width: 650px;
+    margin: 0;
+
+    color: var(--terms-text);
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.terms-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+
+    margin-top: 30px;
+
+    color: var(--terms-muted);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.terms-meta-divider {
+    width: 5px;
+    height: 5px;
+
+    background: var(--terms-blue);
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   04. TERMS INTRODUCTION
+========================================================= */
+
+.terms-intro {
+    padding-top: 90px;
+    padding-bottom: 75px;
+
+    background: var(--terms-black);
+}
+
+.terms-intro-content {
+    max-width: 850px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.terms-intro h2 {
+    margin: 0 0 25px;
+
+    color: var(--terms-white);
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.terms-intro h2 span {
+    color: var(--terms-blue-light);
+}
+
+.terms-intro-content p {
+    margin: 0 auto 17px;
+
+    color: var(--terms-text);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   05. TERMS DOCUMENT LAYOUT
+========================================================= */
+
+.terms-content-section {
+    padding-top: 35px;
+    padding-bottom: 100px;
+
+    background: var(--terms-black);
+}
+
+.terms-layout {
+    display: grid;
+    grid-template-columns: 275px minmax(0, 1fr);
+    align-items: start;
+    gap: 55px;
+}
+
+
+/* =========================================================
+   06. TERMS SIDEBAR
+========================================================= */
+
+.terms-sidebar {
+    position: sticky;
+    top: 110px;
+}
+
+.terms-sidebar-card {
+    padding: 25px 20px;
+
+    background: var(--terms-secondary);
+    border: 1px solid var(--terms-border);
+    border-radius: 12px;
+}
+
+.terms-sidebar-card h3 {
+    margin: 0 0 20px;
+    padding-bottom: 17px;
+
+    color: var(--terms-white);
+    font-size: 17px;
+    font-weight: 700;
+
+    border-bottom: 1px solid var(--terms-border);
+}
+
+.terms-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.terms-navigation a {
+    position: relative;
+    display: block;
+
+    padding: 10px 12px;
+
+    color: var(--terms-text);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    border-radius: 6px;
+    border-left: 2px solid transparent;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.terms-navigation a:hover,
+.terms-navigation a.active {
+    color: var(--terms-white);
+    background: rgba(22, 119, 255, 0.11);
+    border-left-color: var(--terms-blue);
+}
+
+
+/* =========================================================
+   07. SIDEBAR CONTACT NOTE
+========================================================= */
+
+.terms-sidebar-note {
+    margin-top: 20px;
+    padding: 23px 20px;
+
+    background: linear-gradient(
+        145deg,
+        #101E35,
+        #0D1628
+    );
+
+    border: 1px solid rgba(22, 119, 255, 0.28);
+    border-radius: 12px;
+}
+
+.terms-note-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+    margin-bottom: 17px;
+
+    color: var(--terms-white);
+    background: var(--terms-blue);
+    border-radius: 8px;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.terms-sidebar-note h3 {
+    margin: 0 0 10px;
+
+    color: var(--terms-white);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.terms-sidebar-note p {
+    margin: 0 0 17px;
+
+    color: var(--terms-text);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.terms-sidebar-note a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--terms-blue-light);
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.terms-sidebar-note a:hover {
+    color: var(--terms-white);
+}
+
+
+/* =========================================================
+   08. TERMS DOCUMENT
+========================================================= */
+
+.terms-document {
+    min-width: 0;
+    padding: 38px 42px;
+
+    background: var(--terms-dark);
+    border: 1px solid var(--terms-border);
+    border-radius: 14px;
+}
+
+.terms-policy-section {
+    position: relative;
+
+    padding-bottom: 42px;
+    margin-bottom: 42px;
+
+    border-bottom: 1px solid var(--terms-border);
+}
+
+.terms-policy-section:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    border-bottom: none;
+}
+
+.terms-section-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    margin-bottom: 18px;
+
+    color: var(--terms-blue-light);
+    background: rgba(22, 119, 255, 0.12);
+
+    border: 1px solid rgba(22, 119, 255, 0.22);
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.terms-policy-section h2 {
+    margin: 0 0 20px;
+
+    color: var(--terms-white);
+    font-size: 25px;
+    font-weight: 750;
+    line-height: 1.35;
+    letter-spacing: -0.4px;
+}
+
+.terms-policy-section h3 {
+    margin: 28px 0 12px;
+
+    color: var(--terms-white);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.terms-policy-section p {
+    margin: 0 0 17px;
+
+    color: var(--terms-text);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.terms-policy-section strong {
+    color: #DCE6F5;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   09. TERMS DOCUMENT LISTS
+========================================================= */
+
+.terms-policy-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    margin: 17px 0 23px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.terms-policy-section li {
+    position: relative;
+    padding-left: 23px;
+
+    color: var(--terms-text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.terms-policy-section li::before {
+    content: "";
+
+    position: absolute;
+    left: 1px;
+    top: 10px;
+
+    width: 7px;
+    height: 7px;
+
+    background: var(--terms-blue);
+    border-radius: 2px;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   10. TERMS CONTACT CARD
+========================================================= */
+
+.terms-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 28px;
+    padding: 24px;
+
+    background: var(--terms-secondary);
+    border: 1px solid var(--terms-border);
+    border-radius: 10px;
+}
+
+.terms-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 55px;
+    height: 55px;
+
+    color: var(--terms-white);
+
+    background: linear-gradient(
+        135deg,
+        var(--terms-blue),
+        var(--terms-blue-dark)
+    );
+
+    border-radius: 10px;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.terms-contact-details h3 {
+    margin: 0 0 7px;
+
+    color: var(--terms-white);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.terms-contact-details p {
+    margin: 0 0 12px;
+
+    color: var(--terms-text);
+    font-size: 13px;
+}
+
+.terms-contact-details a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--terms-blue-light);
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.terms-contact-details a:hover {
+    color: var(--terms-white);
+}
+
+
+/* =========================================================
+   11. DOCUMENT FOOTER
+========================================================= */
+
+.terms-document-footer {
+    margin-top: 45px;
+    padding: 25px;
+
+    text-align: center;
+
+    background: rgba(22, 119, 255, 0.07);
+    border: 1px solid rgba(22, 119, 255, 0.17);
+    border-radius: 10px;
+}
+
+.terms-document-footer p {
+    margin: 0 0 10px;
+
+    color: var(--terms-white);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.terms-document-footer span {
+    color: var(--terms-blue-light);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+
+/* =========================================================
+   12. TERMS CTA
+========================================================= */
+
+.terms-cta {
+    padding-top: 85px;
+    padding-bottom: 85px;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(22, 119, 255, 0.18),
+            transparent 55%
+        ),
+        var(--terms-secondary);
+
+    border-top: 1px solid var(--terms-border);
+}
+
+.terms-cta-content {
+    max-width: 750px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.terms-cta h2 {
+    margin: 0 0 18px;
+
+    color: var(--terms-white);
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.terms-cta h2 span {
+    color: var(--terms-blue-light);
+}
+
+.terms-cta-content > p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+
+    color: var(--terms-text);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.terms-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 50px;
+    padding: 0 25px;
+
+    color: var(--terms-white);
+    background: var(--terms-blue);
+
+    border: 1px solid var(--terms-blue);
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.terms-cta .btn:hover {
+    background: var(--terms-blue-dark);
+    border-color: var(--terms-blue-dark);
+}
+
+.terms-cta .btn-arrow {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   13. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .terms-layout {
+        grid-template-columns: 235px minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .terms-document {
+        padding: 32px 28px;
+    }
+
+    .terms-navigation a {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+
+    .terms-policy-section h2 {
+        font-size: 23px;
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .terms-hero {
+        min-height: auto;
+    }
+
+    .terms-hero-container {
+        padding-top: 80px;
+        padding-bottom: 75px;
+    }
+
+    .terms-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .terms-hero-content > p {
+        font-size: 14px;
+    }
+
+    .terms-intro {
+        padding-top: 65px;
+        padding-bottom: 55px;
+    }
+
+    .terms-content-section {
+        padding-top: 20px;
+        padding-bottom: 70px;
+    }
+
+    .terms-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .terms-sidebar {
+        position: static;
+    }
+
+    .terms-navigation {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .terms-navigation a {
+        height: 100%;
+        font-size: 12px;
+    }
+
+    .terms-sidebar-note {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .terms-note-icon {
+        margin: 0;
+    }
+
+    .terms-sidebar-note h3 {
+        margin: 0;
+    }
+
+    .terms-sidebar-note p {
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+    .terms-document {
+        padding: 28px 24px;
+    }
+
+    .terms-policy-section {
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+    }
+
+    .terms-policy-section h2 {
+        font-size: 22px;
+    }
+
+    .terms-policy-section p,
+    .terms-policy-section li {
+        font-size: 13px;
+    }
+
+    .terms-cta {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+}
+
+
+/* =========================================================
+   15. SMALL MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .terms-hero .container,
+    .terms-intro .container,
+    .terms-content-section .container,
+    .terms-cta .container {
+        width: calc(100% - 32px);
+    }
+
+    .terms-hero-container {
+        padding-top: 65px;
+        padding-bottom: 60px;
+    }
+
+    .terms-hero h1 {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .terms-hero-content > p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .terms-meta {
+        gap: 9px;
+        font-size: 11px;
+    }
+
+    .terms-intro h2 {
+        font-size: 30px;
+    }
+
+    .terms-intro-content p {
+        font-size: 13px;
+    }
+
+    .terms-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .terms-document {
+        padding: 24px 18px;
+    }
+
+    .terms-policy-section h2 {
+        font-size: 20px;
+    }
+
+    .terms-policy-section h3 {
+        font-size: 16px;
+    }
+
+    .terms-policy-section p,
+    .terms-policy-section li {
+        font-size: 12.5px;
+    }
+
+    .terms-contact-card {
+        align-items: flex-start;
+        padding: 18px 15px;
+        gap: 14px;
+    }
+
+    .terms-contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 19px;
+    }
+
+    .terms-contact-details h3 {
+        font-size: 14px;
+    }
+
+    .terms-contact-details p {
+        font-size: 12px;
+    }
+
+    .terms-document-footer {
+        padding: 20px 14px;
+    }
+
+    .terms-document-footer span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .terms-cta h2 {
+        font-size: 30px;
+    }
+
+    .terms-cta-content > p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   END OF TERMS OF SERVICE CSS
+========================================================= */
